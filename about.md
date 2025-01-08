@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I am an 11th-grade student-athlete at The Bay School of San Francisco. I run Cross Country and Track and I am interested in computer science and cybersecurity.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[hi@kainoanewton.com](mailto:hi@kainoanewton.com)
