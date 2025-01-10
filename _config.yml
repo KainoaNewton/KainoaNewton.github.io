@@ -9,7 +9,7 @@ name: Kainoa Newton's
 description: Student @ The Bay School of San Francisco
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/KainoaNewton/KainoaNewton.github.io/refs/heads/master/images/favicon.png
+avatar: /images/favicon.png
 
 #
 # Flags below are optional

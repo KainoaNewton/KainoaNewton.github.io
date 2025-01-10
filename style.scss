@@ -28,8 +28,8 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 850px;
-  padding: 0 10px;
+  max-width: 900px;
+  padding: 0 40px;
   width: 100%;
 }
 
@@ -151,11 +151,18 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  position: fixed;
+  top: 16px;
+  width: 100%;
+  padding-inline: 10%;
 }
 
 .masthead {
-  padding: 20px 0;
+  padding: 18px 20px;
+  padding-right: 24px;
+  border-radius: 24px;
+  background-color: rgba(14, 18, 23, 0.32);
+  backdrop-filter: blur(40px);
 
   @include mobile {
     text-align: center;
@@ -167,6 +174,10 @@ img {
   width: 70px;
   height: 70px;
   margin-right: 15px;
+
+  width: 40px;
+  height: 40px;
+  margin-right: 7.5px;
 
   @include mobile {
     float: none;
@@ -194,7 +205,7 @@ img {
   color: $text;
   cursor: pointer;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 22px;
   letter-spacing: 1px;
   .blog {
     background: -webkit-linear-gradient(0deg, #608a64, #644c6b);
@@ -203,89 +214,69 @@ img {
   }
 }
 
-.site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: left;
   font-size: 16px;
-  font-weight: 600;
+}
 
-  @include mobile {
-    margin: 3px 0;
+.header-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  font-size: 16px;
+  height: 42px;
+
+  a {
+    opacity: 0.8;
+  }
+  
+  a:hover {
+    text-decoration: underline;
   }
 }
 
-nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-size: 18px;
 
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
+//
+// media queries
+//
 
-  a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-  }
-  .title {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    font-size: 16px;
-  }
-
-  .site-avatar {
-    width: 40px;
-    height: 40px;
-    margin-right: 7.5px;
-  }
-
-  .site-name {
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
-
-  .site-description {
-    margin-top: 4px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-
+@media screen and (max-width: 640px) {
   .header-cols {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .header-links {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    width: 20%;
-    gap: 22px;
-    margin-right: 45px;
+  }
+  .header-links {
+    display: none;
+  }
+}
 
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 500;
-      font-size: 16px;
-      opacity: 0.5;
-      margin-right: 15px;
-    }
-
-    a {
-      color: $text;
-    }
+@media screen and (max-width: 430px) {
+  .exerpt {
+    display: none;
+  }
+  .site-name {
+    display: none;
+  }
+  .header-cols {
+    justify-content: center;
+  }
+  .header-links {
+    display: none;
   }
 }
 
@@ -293,9 +284,13 @@ nav {
 // .main
 //
 
+#main {
+  margin-top: 128px;
+}
+
 .back {
   display: flex;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 6px;
   background-color: $bglighter;
   width: fit-content;
@@ -306,7 +301,7 @@ nav {
   box-sizing: border-box;
   background-color: transparent;
   border: 4px solid $bglighter;
-  padding: 4px 10px;
+  padding: 6px 12px;
 }
 
 .posts {
@@ -342,77 +337,6 @@ nav {
 
   .comments {
     margin-top: 10px;
-  }
-}
-
-.wrapper-footer {
-  margin-top: 50px;
-}
-
-footer {
-  margin-top: 10vh;
-  background-color: $bglighter;
-  border-radius: 10px;
-  padding: 30px 40px;
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin-inline: 10%;
-  bottom: 0;
-
-  .title {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    font-size: 16px;
-  }
-
-  .site-avatar {
-    width: 40px;
-    height: 40px;
-    margin-right: 7.5px;
-  }
-
-  .site-name {
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
-
-  .site-description {
-    margin-top: 4px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  .footer-cols {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .footer-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    gap: 22px;
-    margin-right: 45px;
-
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 500;
-      font-size: 16px;
-      opacity: 0.5;
-      margin-right: 15px;
-    }
-
-    a {
-      color: $text;
-    }
   }
 }
 

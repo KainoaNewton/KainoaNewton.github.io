@@ -19,56 +19,31 @@
 
 <body>
   <div class="wrapper-masthead">
-    <div class="container">
-      <header class="masthead clearfix">
-        <div class="header-cols">
-          <div class="header-me">
-            <div class="title">
-              <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }} <span class="blog">Blog</span></a>
-              </h1>
-            </div>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-          <div class="header-links">
-            <div>SOCIALS</div>
-            <a href="mailto:hi@kainoanewton.com">Email</a>
-            <a href="https://github.com/KainoaNewton">Github</a>
-            <a href="https://kainoanewton.com">Website</a>
+    <header class="masthead clearfix">
+      <div class="header-cols">
+        <div class="header-me">
+          <div class="title">
+            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }} <span class="blog">Blog</span></a>
+            </h1>
           </div>
         </div>
-        <!-- <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+        <div class="header-links">
+          <a href="mailto:hi@kainoanewton.com">Email</a>
+          <a href="https://github.com/KainoaNewton">Github</a>
+        </div>
+      </div>
+      <!-- <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
         <div class="site-info">
           <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }} <span class="blog">Blog</span></a></h1>
           <p class="site-description">{{ site.description }}</p>
         </div> -->
-      </header>
-    </div>
+    </header>
   </div>
 
   <div id="main" role="main" class="container">
     {{ content }}
-  </div>
-
-  <div class="wrapper-footer">
-    <footer class="footer">
-      <div class="footer-cols">
-        <div class="footer-me">
-          <div class="title">
-            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }} <span class="blog">Blog</span></a></h1>
-          </div>
-          <p class="site-description">{{ site.description }}</p>
-        </div>
-        <div class="footer-links">
-          <div>SOCIALS</div>
-          <a href="mailto:hi@kainoanewton.com">Email</a>
-          <a href="https://github.com/KainoaNewton">Github</a>
-          <a href="https://kainoanewton.com">Website</a>
-        </div>
-      </div>
-    </footer>
   </div>
 
   {% include analytics.html %}
