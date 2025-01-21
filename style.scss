@@ -152,10 +152,10 @@ img {
 
 .language-plaintext.highlighter-rouge {
   .highlight {
-    background-color: transparent;
+    background-color: transparent !important;
   }
   code {
-    color: #040604;
+    color: #040604 !important;
   }
 }
 
