@@ -150,6 +150,15 @@ img {
 // .masthead
 //
 
+.language-plaintext.highlighter-rouge {
+  .highlight {
+    background-color: transparent;
+  }
+  code {
+    color: #040604;
+  }
+}
+
 .wrapper-masthead {
   position: fixed;
   top: 16px;
